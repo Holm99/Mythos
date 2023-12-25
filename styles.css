@@ -1,0 +1,72 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden; /* Add this to prevent horizontal scrollbar */
+    height: 100vh; /* Set the body to full viewport height */
+    background-color: #1C2028;
+    color: #517664;
+}
+
+.content {
+    padding: 16px;
+    transition: margin-left 0.5s; /* Add transition for smoother animation */
+    margin-left: 0; /* Set the default margin to 0 */
+    z-index: 3; /* Ensure .content is above both sidebars */
+}
+
+.collapsed-sidebar, .sidebar {
+    height: 100%; /* Set the height of both sidebars to full height */
+}
+
+.collapsed-sidebar {
+    width: 60px;
+    position: fixed;
+    background-color: #5FA8D3;
+    overflow-x: hidden;
+    padding-top: 20px;
+    top: 0;
+    left: 0;
+    z-index: 1; /* Set a higher z-index for collapsed sidebar */
+}
+
+.sidebar {
+    width: auto; /* Set width to auto to adjust dynamically based on content */
+    position: fixed;
+    background-color: #517664;
+    overflow-x: hidden;
+    transition: width 0.5s; /* Add transition for smoother animation */
+    padding-top: 20px;
+    z-index: 2; /* Set an even higher z-index for the expanded sidebar */
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar li {
+    padding: 8px;
+}
+
+.sidebar a {
+    text-decoration: none;
+    font-size: 18px;
+    color: #1C2028;
+    display: block;
+}
+
+.sidebar a:hover {
+    color: #f1f1f1;
+}
+
+.expand-btn {
+    font-size: 20px;
+    background: none;
+    border: none;
+    color: #CD213E;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    padding-bottom: 5px;
+}
