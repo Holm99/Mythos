@@ -1,21 +1,22 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    overflow-x: hidden; /* Add this to prevent horizontal scrollbar */
-    height: 100vh; /* Set the body to full viewport height */
+    overflow-x: hidden; /* Prevents horizontal scrollbar */
+    height: 100vh;
     background-color: #1C2028;
     color: #517664;
 }
 
+
 .content {
     padding: 16px;
-    transition: margin-left 0.5s; /* Add transition for smoother animation */
+    transition: margin-left 0.5s; /* Adds transition for smoother animation */
     margin-left: 0; /* Set the default margin to 0 */
     z-index: 3; /* Ensure .content is above both sidebars */
 }
 
 .collapsed-sidebar, .sidebar {
-    height: 100%; /* Set the height of both sidebars to full height */
+    height: 100%; /* Set the height of both sidebars to full height so it goes all the way down to the depths of the page, forever and ever it goes on not minding it's consistence delve into the abyss, always, ever falling */
 }
 
 .collapsed-sidebar {
@@ -26,17 +27,17 @@ body {
     padding-top: 20px;
     top: 0;
     left: 0;
-    z-index: 1; /* Set a higher z-index for collapsed sidebar */
+    z-index: 1;
 }
 
 .sidebar {
-    width: auto; /* Set width to auto to adjust dynamically based on content */
+    width: auto; /* Auto to adjust dynamically based on content */
     position: fixed;
     background-color: #517664;
     overflow-x: hidden;
-    transition: width 0.5s; /* Add transition for smoother animation */
+    transition: width 0.5s;
     padding-top: 20px;
-    z-index: 2; /* Set an even higher z-index for the expanded sidebar */
+    z-index: 2;
 }
 
 .sidebar ul {
